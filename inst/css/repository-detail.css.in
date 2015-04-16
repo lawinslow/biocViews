@@ -1,0 +1,39 @@
+body
+{
+    background-color: @BACKGROUND_COLOR@;
+    margin-left:10%;       
+    margin-right:10%;       
+}
+
+
+p.description
+{
+    background-color: #CE8;
+    margin-right:20%;
+}
+
+tr.row_odd
+{
+    background-color: #FFF;
+}
+
+tr.row_even
+{
+    background-color: #DDD;
+}
+
+td 
+{
+    padding-right:10px;
+    padding-left:4px;
+}
+
+th
+{
+    text-align: left;
+    padding-right:10px;
+    padding-left:4px;
+    font-weight:bold;
+}
+
+    

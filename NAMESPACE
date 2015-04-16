@@ -1,0 +1,42 @@
+import(methods)
+
+importMethodsFrom(graph, acc, adj, edges, inEdges, nodes, subGraph)
+
+importFrom(Biobase, copySubstitute)
+
+importFrom(RBGL, sp.between)
+
+importFrom(tools, write_PACKAGES)
+
+importFrom(utils, download.file, Stangle)
+
+importFrom(knitr, purl)
+
+importMethodsFrom(XML, saveXML)
+importFrom(XML, xmlNode, xmlOutputDOM, xmlTree, htmlParse,
+       getNodeSet, xmlValue)
+importFrom(RCurl, getURL)
+
+importFrom(RUnit, checkTrue)
+
+exportClasses("Htmlized",
+
+              "PackageDetail", "pdAuthorMaintainerInfo", "pdVignetteInfo",
+              "pdDownloadInfo", "pdDetailsInfo", "pdDescriptionInfo",
+              "pdVigsAndDownloads",
+
+              "RepositoryDetail", "rdPackageTable",
+
+              "BiocView", "bvTitle", "bvPackageTable", "bvSubViews",
+              "bvParentViews")
+
+exportMethods("coerce", "show", "htmlDoc", "htmlValue", "htmlFilename")
+
+export("writeBiocViews", "getBiocViews", "write_VIEWS", "write_REPOSITORY",
+       "genReposControlFiles", "extractVignettes", "extractManuals",
+       "extractCitations", "getCurrentbiocViews",
+       "extractNEWS", "extractHTMLDocuments", "extractTopLevelFiles",
+       "writeRepositoryHtml", "writePackageDetailHtml", "getSubTerms",
+       "getBiocSubViews", "validate_bioc_views", "writeTopLevelView",
+       "writeHtmlDoc", "write_SYMBOLS", "writeRFilesFromVignettes",
+       "getPackageNEWS", "printNEWS","recommendBiocViews")
