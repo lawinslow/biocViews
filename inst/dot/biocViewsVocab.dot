@@ -1,0 +1,518 @@
+/* Bioc Views Vocabular Definition in dot format */
+
+/* How To Process this file:
+   1. Use dot2gxl from graphviz to transform into GXL format.
+          dot2gxl biocViewsVocab.dot > biocViewsVocab.gxl
+   2. use graph::fromGXL to obtain a graphNEL object
+          
+*/
+
+digraph G {
+
+/****************************************************************************
+ *                               Software                                   *
+ ****************************************************************************/
+BiocViews -> Software;
+
+/* Software -> AssayDomain */
+Software -> AssayDomain;
+AssayDomain -> aCGH;
+AssayDomain -> CellBasedAssays;
+AssayDomain -> ChIPchip;
+AssayDomain -> CopyNumberVariation;
+AssayDomain -> CpGIsland;
+AssayDomain -> DNAMethylation;
+AssayDomain -> ExonArray;
+AssayDomain -> GeneExpression;
+AssayDomain -> GeneticVariability;
+AssayDomain -> SNP;
+AssayDomain -> Transcription;
+
+/* Software -> Technology */
+Software -> Technology;
+Technology -> Sequencing;
+Sequencing -> DNASeq;
+Sequencing -> RiboSeq; 
+Sequencing -> RNASeq;
+Sequencing -> ChIPSeq;
+Sequencing -> RIPSeq;
+Sequencing -> MethylSeq;
+Sequencing -> ExomeSeq;
+Sequencing -> miRNA;
+Sequencing -> SangerSeq;
+Sequencing -> SmallRNA;
+Sequencing -> Microbiome;
+Sequencing -> WholeGenome;
+Sequencing -> DenovoGenome;
+Sequencing -> TargetedResequencing;
+Sequencing -> DenovoTranscriptome;
+Sequencing -> MicrobialStrain;
+Sequencing -> HiC;
+Technology -> Microarray;
+Microarray -> MultiChannel;
+Microarray -> OneChannel;
+Microarray -> TwoChannel;
+Microarray -> MethylationArray;
+Microarray -> GenotypingArray;
+Microarray -> MicroRNAArray;
+Microarray -> mRNAMicroarray;
+Microarray -> ChipOnChip;
+Microarray -> ReversePhaseProteinArray;
+Microarray -> TissueMicroarray;
+Microarray -> ProprietaryPlatforms;
+Technology -> FlowCytometry;
+Technology -> MassSpectrometry;
+MassSpectrometry -> ImagingMassSpectrometry;
+Technology -> qPCR;
+Technology -> MicrotitrePlateAssay;
+Technology -> SAGE;
+
+/* Software -> ResearchFields */
+Software -> ResearchField;
+ResearchField -> CellBiology;
+ResearchField -> Genetics;
+ResearchField -> Metabolomics;
+ResearchField -> Metagenomics;
+ResearchField -> Proteomics;
+ResearchField -> Lipidomics;
+ResearchFiled -> Epigenetics;
+ResearchField -> Pharmacogenomics;
+ResearchField -> Pharmacogenetics;
+ResearchField -> Cheminformatics;
+ResearchField -> StructuralGenomics;
+ResearchField -> Biophysics;
+ResearchField -> MathematicalBiology;
+ResearchField -> BiomedicalInformatics;
+ResearchField -> ComparativeGenomics; 
+ResearchField -> FunctionalGenomics;
+ResearchField -> SystemsBiology;
+ResearchField -> ComputationalChemistry;
+ResearchField -> Agroinformatics;
+ResearchField -> Transcriptomics;
+    
+/* Software -> BiologicalQuestion */
+Software -> BiologicalQuestion;
+BiologicalQuestion -> AlternativeSplicing;
+BiologicalQuestion -> Coverage;
+BiologicalQuestion -> DemethylateRegionDetection;
+BiologicalQuestion -> DenovoAssembler;
+BiologicalQuestion -> DifferentialExpression;
+BiologicalQuestion -> DifferentialMethylation;
+BiologicalQuestion -> DifferentialPeakCalling;
+BiologicalQuestion -> DifferentialSplicing;
+BiologicalQuestion -> DriverMutation;
+BiologicalQuestion -> FunctionalPrediction;
+BiologicalQuestion -> GeneFusionDetection;
+BiologicalQuestion -> GenePrediction; 
+BiologicalQuestion -> GeneRegulation;
+BiologicalQuestion -> GeneSetEnrichment;
+BiologicalQuestion -> GeneSignaling;
+BiologicalQuestion -> GeneTarget; 
+BiologicalQuestion -> GenomeAssembly;
+BiologicalQuestion -> GenomeWideAssociation;
+BiologicalQuestion -> GenomicVariation;
+BiologicalQuestion -> GenomeAnnotation;
+BiologicalQuestion -> GermlineMutation;
+BiologicalQuestion -> HistoneModification;
+BiologicalQuestion -> IndelDetection;
+BiologicalQuestion -> LinkageDisequilibrium;
+BiologicalQuestion -> MetagenomeAssembly;
+BiologicalQuestion -> MicrosatelliteDetection;
+BiologicalQuestion -> MotifAnnotation;
+BiologicalQuestion -> MotifDiscovery;
+BiologicalQuestion -> NetworkEnrichment;
+BiologicalQuestion -> NetworkInference;
+BiologicalQuestion -> NucleosomePositioning;  
+BiologicalQuestion -> PeakDetection; 
+BiologicalQuestion -> QuantitativeTrailLocus;
+BiologicalQuestion -> Scaffolding;
+BiologicalQuestion -> SequenceMatching;
+BiologicalQuestion -> SomaticMutation;
+BiologicalQuestion -> SplicedAlignment;
+BiologicalQuestion -> StructuralVariation;
+BiologicalQuestion -> TranscriptomeVariant;
+BiologicalQuestion -> VariantAnnotation;
+BiologicalQuestion -> VariantDetection;
+
+/* Software -> WorkflowStep */
+Software -> WorkflowStep;
+WorkflowStep -> ExperimentalDesign;
+WorkflowStep -> Alignment;
+Alignment -> MultipleSequenceAlignment;
+WorkflowStep -> Annotation;
+WorkflowStep -> BatchEffect;
+WorkflowStep -> MultipleComparison;
+WorkflowStep -> Normalization;
+WorkflowStep -> Pathways;
+Pathways -> GO;
+Pathways -> KEGG;
+Pathways -> Reactome; 
+Pathways -> BioCarta;
+Pathways -> NCINatureCurated;
+WorkflowStep -> Preprocessing;
+WorkflowStep -> QualityControl; 
+WorkflowStep -> ReportWriting;
+WorkflowStep -> Visualization;
+Visualization -> Network;
+WorkflowStep -> GenomeBrowsers;
+
+/* Software -> StatisticalMethod */
+Software -> StatisticalMethod;
+StatisticalMethod -> Bayesian;
+StatisticalMethod -> Classification;
+StatisticalMethod -> Clustering;
+StatisticalMethod -> DecisionTree;
+StatisticalMethod -> DimensionReduction;
+StatisticalMethod -> FeatureExtraction;
+StatisticalMethod -> GraphAndNetwork;
+StatisticalMethod -> HiddenMarkovModel;
+StatisticalMethod -> MultidimensionalScaling;
+StatisticalMethod -> NeuralNetwork;
+StatisticalMethod -> PatternLogic;
+StatisticalMethod -> PrincipalComponent;
+StatisticalMethod -> Regression;
+StatisticalMethod -> StructuralEquationModels;
+StatisticalMethod -> SupportVectorMachine;
+StatisticalMethod -> Survival;
+StatisticalMethod -> TimeCourse;
+    
+/* Software -> Infrastructure */ 
+Software -> Infrastructure;
+Infrastructure -> ThirdPartyClient
+Infrastructure -> DataImport;
+Infrastructure -> DataRepresentation;
+Infrastructure -> GUI;
+
+
+/****************************************************************************
+ *                            AnnotationData                                *
+ ****************************************************************************/
+BiocViews -> AnnotationData;
+
+/* AnnotationData -> Organism */
+AnnotationData -> Organism;
+Organism -> Anopheles_gambiae;
+Organism -> Apis_mellifera;
+Organism -> Arabidopsis_lyrata;
+Organism -> Arabidopsis_thaliana;
+Organism -> Bacillus_subtilis;
+Organism -> Bos_taurus;
+Organism -> Caenorhabditis_elegans;
+Organism -> Canis_familiaris;
+Organism -> Ciona_intestinalis;
+Organism -> Danio_rerio;
+Organism -> Drosophila_melanogaster;
+Organism -> Eremothecium_gossypii;
+Organism -> Escherichia_coli;
+Organism -> Gallus_gallus;
+Organism -> Gasterosteus_aculeatus;
+Organism -> Glycine_max;
+Organism -> Homo_sapiens;
+Organism -> Hordeum_vulgare;
+Organism -> Kluyveromyces_lactis;
+Organism -> Macaca_fascicularis;
+Organism -> Macaca_mulatta;
+Organism -> Magnaporthe_grisea;
+Organism -> Medicago_truncatula;
+Organism -> Mus_musculus;
+Organism -> Neurospora_crassa;
+Organism -> Oncorhynchus_mykiss;
+Organism -> Oryza_sativa;
+Organism -> Pan_troglodytes;
+Organism -> Plasmodium_falciparum;
+Organism -> Pseudomonas_aeruginosa;
+Organism -> Rattus_norvegicus;
+Organism -> Saccharomyces_cerevisiae;
+Organism -> Saccharum_officinarum;
+Organism -> Schizosaccharomyces_pombe;
+Organism -> Staphylococcus_aureus;
+Organism -> Sus_scrofa;
+Organism -> Taeniopygia_guttata;
+Organism -> Triticum_aestivum;
+Organism -> Vitis_vinifera;
+Organism -> Xenopus_laevis;
+Organism -> Xenopus_tropicalis;
+Organism -> Zea_mays;
+
+/* AnnotationData -> ChipManufacturer */
+AnnotationData -> ChipManufacturer;
+ChipManufacturer -> AffymetrixChip;
+ChipManufacturer -> AgilentChip;
+ChipManufacturer -> ClonetechChip;
+ChipManufacturer -> GEChip;
+ChipManufacturer -> INDACChip;
+ChipManufacturer -> IlluminaChip;
+ChipManufacturer -> QiagenChip;
+ChipManufacturer -> RNG_MRCChip;
+ChipManufacturer -> RocheChip;
+ChipManufacturer -> UniversityHealthNetwork;
+ChipManufacturer -> CodelinkChip; 
+
+/* AnnotationData -> CustomCDF */
+AnnotationData -> CustomCDF;
+CustomCDF -> GACustomCDF;
+CustomCDF -> MBNICustomCDF;
+
+/* AnnotationData -> CustomArray */
+AnnotationData -> CustomArray;
+
+/* AnnotationData -> CustomDBSchema */
+AnnotationData -> CustomDBSchema;
+CustomDBSchema -> GeneCardsCustomSchema;
+
+/* AnnotationData -> FunctionalAnnotation */
+AnnotationData -> FunctionalAnnotation;
+
+/* AnnotationData -> SequenceAnnotation */
+AnnotationData -> SequenceAnnotation;
+SequenceAnnotation -> GenomicSequence;
+SequenceAnnotation -> miRNA;
+SequenceAnnotation -> MotifAnnotation;
+
+/* AnnotationData -> ChipName */
+AnnotationData -> ChipName;
+ChipName -> adme16cod;
+ChipName -> ag;
+ChipName -> ath1121501;
+ChipName -> celegans;
+ChipName -> drosgenome1;
+ChipName -> drosophila2;
+ChipName -> h10kcod;
+ChipName -> h20kcod;
+ChipName -> hcg110;
+ChipName -> hgfocus;
+ChipName -> hgu133a2;
+ChipName -> hgu133a;
+ChipName -> hgu133b;
+ChipName -> hgu133plus2;
+ChipName -> hgu95a;
+ChipName -> hgu95av2;
+ChipName -> hgu95b;
+ChipName -> hgu95c;
+ChipName -> hgu95d;
+ChipName -> hgu95e;
+ChipName -> hguatlas13k;
+ChipName -> hgug4100a;
+ChipName -> hgug4101a;
+ChipName -> hgug4110b;
+ChipName -> hgug4111a;
+ChipName -> hgug4112a;
+ChipName -> hguqiagenv3;
+ChipName -> hi16cod;
+ChipName -> hs25kresogen;
+ChipName -> hu35ksuba;
+ChipName -> hu35ksubb;
+ChipName -> hu35ksubc;
+ChipName -> hu35ksubd;
+ChipName -> hu6800;
+ChipName -> HuO22;
+ChipName -> hwgcod;
+ChipName -> indac;
+ChipName -> illuminaHumanv1;
+ChipName -> illuminaHumanv2;
+ChipName -> illuminaMousev1;
+ChipName -> illuminaMousev1p1;
+ChipName -> illuminaRatv1;
+ChipName -> JazaerimetaData;
+ChipName -> lumiHumanV1;
+ChipName -> lumiMouseV1;
+ChipName -> lumiHumanV2;
+ChipName -> lumiRatV1;
+ChipName -> m10kcod;
+ChipName -> m20kcod;
+ChipName -> mi16cod;
+ChipName -> mm24kresogen;
+ChipName -> mgu74a;
+ChipName -> mgu74av2;
+ChipName -> mgu74b;
+ChipName -> mgu74bv2;
+ChipName -> mgu74c;
+ChipName -> mgu74cv2;
+ChipName -> mguatlas5k;
+ChipName -> mgug4121a;
+ChipName -> mgug4122a;
+ChipName -> moe430a;
+ChipName -> moe430b;
+ChipName -> mouse4302;
+ChipName -> mouse430a2;
+ChipName -> mpedbarray;
+ChipName -> mu11ksuba;
+ChipName -> mu11ksubb;
+ChipName -> mu19ksuba;
+ChipName -> mu19ksubb;
+ChipName -> mu19ksubc;
+ChipName -> Mu15v1;
+ChipName -> Mu22v3;
+ChipName -> mwgcod;
+ChipName -> Norway981;
+ChipName -> OperonHumanV3;
+ChipName -> pedbarrayv9;
+ChipName -> pedbarrayv10;
+ChipName -> PartheenMetaData;
+ChipName -> r10kcod;
+ChipName -> rae230a;
+ChipName -> rae230b;
+ChipName -> rat2302;
+ChipName -> rgu34a;
+ChipName -> rgu34b;
+ChipName -> rgu34c;
+ChipName -> rgug4130a;
+ChipName -> ri16cod;
+ChipName -> rnu34;
+ChipName -> Roberts2005Annotation;
+ChipName -> rtu34;
+ChipName -> rwgcod;
+ChipName -> SHDZ;
+ChipName -> u133x3p;
+ChipName -> xenopuslaevis;
+ChipName -> yeast2;
+ChipName -> ygs98;
+ChipName -> zebrafish;
+ChipName -> hcgi12k;
+ChipName -> hcgi8k;
+
+/* AnnotationData -> PackageType */
+AnnotationData -> PackageType;
+PackageType -> BSgenome;
+PackageType -> cdf;
+PackageType -> ChipDb;
+PackageType -> db0;
+PackageType -> InparanoidDb;
+PackageType -> OrganismDb;
+PackageType -> OrgDb;
+PackageType -> PolyPhen;
+PackageType -> probe;
+PackageType -> SIFT;
+PackageType -> SNPlocs;
+PackageType -> XtraSNPlocs;
+PackageType -> TxDb;
+PackageType -> MeSHDb;
+PackageType -> FRMA;
+
+
+
+/****************************************************************************
+ *                            ExperimentData                                *
+ ****************************************************************************/
+BiocViews -> ExperimentData;
+
+ExperimentData -> ReproducibleResearch;
+
+ExperimentData -> SpecimenSource; 
+SpecimenSource -> Tissue;  
+SpecimenSource -> Proteome;
+SpecimenSource -> Genome; 
+SpecimenSource -> StemCell;
+SpecimenSource -> CellCulture; 
+SpecimenSource -> Germline;
+SpecimenSource -> Somatic; 
+
+ExperimentData -> OrganismData;
+OrganismData -> Anopheles_gambiae_Data;
+OrganismData -> Apis_mellifera_Data;
+OrganismData -> Arabidopsis_lyrata_Data;
+OrganismData -> Arabidopsis_thaliana_Data;
+OrganismData -> Bacillus_subtilis_Data;
+OrganismData -> Bos_taurus_Data;
+OrganismData -> Caenorhabditis_elegans_Data;
+OrganismData -> Canis_familiaris_Data;
+OrganismData -> Ciona_intestinalis_Data;
+OrganismData -> Danio_rerio_Data;
+OrganismData -> Drosophila_melanogaster_Data;
+OrganismData -> Eremothecium_gossypii_Data;
+OrganismData -> Escherichia_coli_Data;
+OrganismData -> Gallus_gallus_Data;
+OrganismData -> Gasterosteus_aculeatus_Data;
+OrganismData -> Glycine_max_Data;
+OrganismData -> Homo_sapiens_Data;
+OrganismData -> Hordeum_vulgare_Data;
+OrganismData -> Kluyveromyces_lactis_Data;
+OrganismData -> Macaca_mulatta_Data;
+OrganismData -> Magnaporthe_grisea_Data;
+OrganismData -> Medicago_truncatul_Dataa;
+OrganismData -> Mus_musculus_Data;
+OrganismData -> Neurospora_crassa_Data;
+OrganismData -> Oncorhynchus_mykiss_Data;
+OrganismData -> Oryza_sativa_Data;
+OrganismData -> Pan_troglodytes_Data;
+OrganismData -> Plasmodium_falciparum_Data;
+OrganismData -> Pseudomonas_aeruginosa_Data;
+OrganismData -> Rattus_norvegicus_Data;
+OrganismData -> Saccharomyces_cerevisiae_Data;
+OrganismData -> Saccharum_officinarum_Data;
+OrganismData -> Schizosaccharomyces_pombe_Data;
+OrganismData -> Staphylococcus_aureus_Data;
+OrganismData -> Sus_scrofa_Data;
+OrganismData -> Taeniopygia_guttata_Data;
+OrganismData -> Triticum_aestivum_Data;
+OrganismData -> Vitis_vinifera_Data;
+OrganismData -> Xenopus_laevis_Data;
+OrganismData -> Xenopus_tropicalis_Data;
+OrganismData -> Zea_mays_Data;
+
+
+ExperimentData -> DiseaseModel; 
+DiseaseModel -> CancerData;
+CancerData -> BreastCancerData;
+CancerData -> ColonCancerData;
+CancerData -> KidneyCancerData;
+CancerData -> LeukemiaCancerData;
+CancerData -> LungCancerData;
+CancerData -> OvarianCancerData;
+CancerData -> ProstateCancerData;
+CancerData -> LeukemiaCancerData;
+DiseaseModel -> HIVData;
+DiseaseModel -> COPDData;
+
+ExperimentData -> TechnologyData;
+TechnologyData -> FlowCytometryData;
+TechnologyData -> HighThroughputImagingData;
+TechnologyData -> MassSpectrometryData;
+MassSpectrometryData -> ImagingMassSpectrometryData;
+TechnologyData -> qPCRData;
+TechnologyData -> MicrotitrePlateAssayData;
+TechnologyData -> SAGEData;
+TechnologyData -> CGHData;
+TechnologyData -> SequencingData;
+SequencingData -> DNASeqData;
+SequencingData -> RNASeqData;
+SequencingData -> ChIPSeqData;
+SequencingData -> RIPSeqData;
+SequencingData -> MethylSeqData;
+SequencingData -> ExomeSeqData;
+SequencingData -> miRNAData;
+SequencingData -> SangerSeqData;
+SequencingData -> SmallRNAData;
+SequencingData -> MicrobiomeData;
+TechnologyData -> MicroarrayData;
+MicroarrayData -> MultiChannelData;
+MicroarrayData -> OneChannelData;
+MicroarrayData -> TwoChannelData;
+MicroarrayData -> MethylationArrayData;
+MicroarrayData -> GenotypingArrayData;
+MicroarrayData -> MicroRNAArrayData;
+MicroarrayData -> mRNAArrayData;
+MicroarrayData -> ChipOnChipData;
+MicroarrayData -> ReversePhaseProteinArrayData;
+MicroarrayData -> TissueMicroarrayData;
+MicroarrayData -> ProprietaryPlatformsData;
+
+ExperimentData -> AssayDomainData;
+AssayDomainData -> CopyNumberVariationData;
+AssayDomainData -> CpGIslandData;
+AssayDomainData -> SNPData; 
+AssayDomainData -> ExpressionData; 
+
+ExperimentData -> RepositoryData; 
+RepositoryData -> HapMap;
+RepositoryData -> GEO;
+RepositoryData -> ArrayExpress;
+RepositoryData -> NCI;
+RepositoryData -> PathwayInteractionDatabase; 
+RepositoryData -> Project1000genomes; 
+RepositoryData -> ENCODE; 
+}
+
+
+
+

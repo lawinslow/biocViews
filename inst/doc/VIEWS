@@ -1,0 +1,188 @@
+Package: RBGL
+Version: 1.7.0
+Depends: graph
+Title: Test interface to boost C++ graph lib
+Description: demo of interface with full copy of all hpp defining boost
+biocViews: GraphsAndNetworks
+Author: Vince Carey <stvjc@channing.harvard.edu>, Li Long
+        <lilong@isb-sib.ch>
+Maintainer: Li Long <lilong@isb-sib.ch>
+URL: http://www.bioconductor.org
+License: LGPL
+source.ver: src/contrib/RBGL_1.7.0.tar.gz
+vignettes: vignettes/RBGL/inst/doc/RBGL-004.pdf,
+        vignettes/RBGL/inst/doc/RBGL-005.pdf,
+        vignettes/RBGL/inst/doc/RBGL-006.pdf,
+        vignettes/RBGL/inst/doc/RBGL-011.pdf,
+        vignettes/RBGL/inst/doc/RBGL-012.pdf,
+        vignettes/RBGL/inst/doc/RBGL-016.pdf,
+        vignettes/RBGL/inst/doc/RBGL-017.pdf,
+        vignettes/RBGL/inst/doc/RBGL.pdf,
+        vignettes/RBGL/inst/doc/filedep.pdf
+
+Package: Rgraphviz
+Version: 1.9.0
+Depends: R (>= 2.1.0), graph
+Suggests: Biobase, geneplotter, fibroEset, hgu95av2
+Title: Provides plotting capabilities for R graph objects
+Description: Interfaces R with the AT&T GraphViz library to provide the
+        ability for plotting R graph objects from the graph package
+biocViews: GraphsAndNetworks
+Author: Jeff Gentry <jgentry@jimmy.harvard.edu>
+Maintainer: Jeff Gentry <jgentry@jimmy.harvard.edu>
+License: LGPL
+SystemRequirements: Graphviz version >= 1.12
+source.ver: src/contrib/Rgraphviz_1.9.0.tar.gz
+vignettes: vignettes/Rgraphviz/inst/doc/Rgraphviz.pdf,
+        vignettes/Rgraphviz/inst/doc/layingOutPathways.pdf
+
+Package: Ruuid
+Version: 1.9.0
+Depends: R (>= 2.1), methods
+Title: Ruuid: Provides Universally Unique ID values
+Description: A package to provide UUID values in R
+Author: R. Gentleman
+Maintainer: R. Gentleman <rgentlem@fhcrc.org>
+License: LGPL
+source.ver: src/contrib/Ruuid_1.9.0.tar.gz
+vignettes: vignettes/Ruuid/inst/doc/Ruuid.pdf
+
+Package: aCGH
+Version: 1.5.0
+Depends: R (>= 1.8.0), cluster, survival, multtest, sma
+Title: Classes and functions for Array Comparative Genomic
+        Hybridization data.
+Description: Functions for reading aCGH data from image analysis output
+        files and clone information files, creation of aCGH S3 objects
+        for storing these data. Basic methods for accessing/replacing,
+        subsetting, printing and plotting aCGH objects.
+Author: Jane Fridlyand <jfridlyand@cc.ucsf.edu>, Peter Dimitrov
+        <dimitrov@stat.Berkeley.EDU>
+Maintainer: Jane Fridlyand <jfridlyand@cc.ucsf.edu>
+License: GPL
+source.ver: src/contrib/aCGH_1.5.0.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/aCGH_1.4.0.zip
+vignettes: vignettes/aCGH/inst/doc/aCGH.pdf
+
+Package: affxparser
+Version: 1.3.0
+Depends: R (>= 2.0), Biobase
+Suggests: affy
+Title: Affymetrix File Parsing SDK
+Description: Package for parsing Affymetrix files (CDF, CEL, CHP,
+        BPMAP, BAR)
+biocViews: DataImport
+Author: James Bullard, Kasper Daniel Hansen
+Maintainer: James Bullard <bullard@berkeley.edu>
+License: LGPL-2
+source.ver: src/contrib/affxparser_1.3.0.tar.gz
+
+Package: affy
+Version: 1.9.1
+Depends: R (>= 2.0.1), Biobase (>= 1.5.0), methods, utils
+Suggests: tkWidgets (>= 1.2.2), affydata
+Title: Methods for Affymetrix Oligonucleotide Arrays
+Description: The package contains functions for exploratory
+        oligonucleotide array analysis. The dependance to tkWidgets
+        only concerns few convenience functions. 'affy' is fully
+        functional without it.
+biocViews: Microarray, OneChannel, Preprocessing
+Author: Rafael A. Irizarry <rafa@jhu.edu>, Laurent Gautier
+        <laurent@cbs.dtu.dk>, Benjamin Milo Bolstad
+        <bolstad@stat.Berkeley.EDU>, and Crispin Miller
+        <cmiller@picr.man.ac.uk> with contributions from Magnus Astrand
+        <Magnus.Astrand@astrazeneca.com>, Leslie M. Cope
+        <cope@mts.jhu.edu>, Robert Gentleman, Jeff Gentry, Conrad
+        Halling <challing@agilixcorp.com>, Wolfgang Huber, James
+        MacDonald <jmacdon@med.umich.edu>, Benjamin I. P. Rubinstein,
+        Christopher Workman <workman@cbs.dtu.dk>, John Zhang
+Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+License: LGPL version 2 or newer
+source.ver: src/contrib/affy_1.9.1.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/affy_1.8.1.zip
+vignettes: vignettes/affy/inst/doc/affy.pdf,
+        vignettes/affy/inst/doc/builtinMethods.pdf,
+        vignettes/affy/inst/doc/customMethods.pdf,
+        vignettes/affy/inst/doc/dealing_with_cdfenvs.pdf,
+        vignettes/affy/inst/doc/vim.pdf
+
+Package: affycomp
+Version: 1.7.0
+Depends: R (>= 1.8.1), Biobase (>= 1.1.0)
+Title: Graphics Toolbox for Assessment of Affymetrix Expression
+        Measures
+Description: The package contains functions that can be used to compare
+        expression measures for Affymetrix Oligonucleotide Arrays.
+Author: Rafael A. Irizarry <rafa@jhu.edu> and Zhijin Wu <zwu@jhsph.edu>
+        with contributions from Simon Cawley
+        <simon_cawley@affymtrix.com>,
+Maintainer: Rafael A. Irizarry <rafa@jhu.edu>
+License: GPL version 2 or newer
+source.ver: src/contrib/affycomp_1.7.0.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/affycomp_1.6.0.zip
+vignettes: vignettes/affycomp/inst/doc/affycomp.pdf
+
+Package: affydata
+Version: 1.7.0
+Depends: R (>= 1.6.2), affy (>= 1.2)
+Suggests: hgu95av2cdf, hgu133acdf
+Title: Affymetrix Data for Demonstration Purpose
+Description: Example datasets of a slightly large size. They represent
+        'real world examples', unlike the artificial examples included
+        in the package affy.
+Author: Bioconductor
+Maintainer: Laurent <laurent@cbs.dtu.dk>
+License: GPL version 2 or newer
+source.ver: src/contrib/affydata_1.7.0.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/affydata_1.6.0.zip
+vignettes: vignettes/affydata/inst/doc/affydata.pdf
+
+Package: affylmGUI
+Version: 1.5.0
+Depends: limma, tcltk, affy
+Suggests: tkrplot, affyPLM, R2HTML, xtable
+Title: GUI for affy analysis using limma package
+Description: A Graphical User Interface for affy analysis using the
+        limma Microarray package
+biocViews: Microarray, OneChannel, DataImport, QualityControl,
+        Preprocessing, Statistics, DifferentialExpression,
+        MultipleComparisons
+Author: James Wettenhall and Ken Simpson Division of Genetics and
+        Bioinformatics, WEHI.
+Maintainer: Keith Satterley <keith@wehi.edu.au>
+URL: http://bioinf.wehi.edu.au/affylmGUI/
+License: GPL version 2 or newer
+source.ver: src/contrib/affylmGUI_1.5.0.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/affylmGUI_1.4.0.zip
+vignettes: vignettes/affylmGUI/inst/doc/affylmGUI.pdf,
+        vignettes/affylmGUI/inst/doc/extract.pdf
+
+Package: affypdnn
+Version: 1.5.0
+Depends: R (>= 1.9.0), affy (>= 1.5), affydata, hgu95av2probe
+Title: Probe Dependent Nearest Neighbours (PDNN) for the affy package
+Description: The package contains functions to perform the PDNN method
+        described by Li Zhang et al.
+Author: H. Bjorn Nielsen and Laurent Gautier (Many thanks to Li Zhang
+        early communications about the existence of the PDNN program
+        and related publications).
+Maintainer: Laurent <laurent@cbs.dtu.dk>
+License: LGPL
+source.ver: src/contrib/affypdnn_1.5.0.tar.gz
+win.binary.ver: bin/windows/contrib/2.3/affypdnn_1.4.0.zip
+
+Package: graph
+Version: 1.9.0
+Depends: R (>= 2.1.0), cluster, Ruuid
+Suggests: SparseM (>= 0.36), XML
+Title: graph: A package to handle graph data structures
+Description: A package that implements some simple graph handling
+        capabilities.
+biocViews: GraphsAndNetworks
+Author: R. Gentleman, Elizabeth Whalen
+Maintainer: R. Gentleman <rgentlem@fhcrc.org>
+License: LGPL
+source.ver: src/contrib/graph_1.9.0.tar.gz
+vignettes: vignettes/graph/inst/doc/clusterGraph.pdf,
+        vignettes/graph/inst/doc/graph.pdf
+
