@@ -117,14 +117,14 @@ setMethod("htmlValue", signature(object="pdVignetteInfo"),
                         paste(object@reposRoot, object@vignettes[i], sep="/")
                       dom$addTag("a", "PDF", attrs=c(href=pdflink))
                       dom$closeTag()
-                      if (nchar(object@vignetteScripts[i]) > 0) {
-                          dom$addTag("td", close=FALSE)
-                          Rlink <-
-                            paste(object@reposRoot, object@vignetteScripts[i],
-                                  sep="/")
-                          dom$addTag("a", "R Script", attrs=c(href=Rlink))
-                          dom$closeTag()
-                      }
+#                       if (nchar(object@vignetteScripts[i]) > 0) {
+#                           dom$addTag("td", close=FALSE)
+#                           Rlink <-
+#                             paste(object@reposRoot, object@vignetteScripts[i],
+#                                   sep="/")
+#                           #dom$addTag("a", "R Script", attrs=c(href=Rlink))
+#                           dom$closeTag()
+#                       }
                       dom$closeTag() ## end tr
                       odd <- !odd
                   }
@@ -156,14 +156,14 @@ setMethod("htmlValue", signature(object="pdVignetteInfo"),
 setMethod("htmlValue", signature(object="pdDownloadInfo"),
           function(object) {
               flds <- c(source="source.ver",
-                        win.binary="win.binary.ver",
                         win64.binary="win64.binary.ver",
-                        mac.binary.leopard="mac.binary.leopard.ver")
+                        mac.binary.leopard="mac.binary.leopard.ver", 
+                        mac.binary.mavericks="mac.binary.mavericks.ver")
               
               fileTypes <- list(source="Package source",
-                                win.binary="Windows 32-bit binary",
                                 win64.binary="Windows 64-bit binary",
-                                mac.binary.leopard="MacOS X 10.5 (Leopard) binary")
+                                mac.binary.leopard="MacOS X 10.5 (Leopard) binary", 
+                                mac.binary.mavericks="MacOS X >=10.9 (Mavericks) binary")
               makeLinkHelper <- function(type) {
                 
                 
@@ -353,9 +353,8 @@ setMethod("htmlValue", signature(object="PackageDetail"),
                          attrs=c(class="install"))
               dom$addTag("pre",
                          paste("    ",
-                               "source(\"",
-                               "http://bioconductor.org/biocLite.R\")",
-                               "\n    biocLite(\"", object@Package, "\")",
+                               "install.packages(\"", object@Package, "\", repos=c(\"http://owi.usgs.gov/R\",getOption(\"repos\")))",
+                               "\n",
                                sep=""))
               dom$closeTag() # div
 
