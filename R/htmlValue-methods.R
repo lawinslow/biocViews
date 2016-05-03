@@ -156,14 +156,16 @@ setMethod("htmlValue", signature(object="pdVignetteInfo"),
 setMethod("htmlValue", signature(object="pdDownloadInfo"),
           function(object) {
               flds <- c(source="source.ver",
-                        win64.binary="win64.binary.ver")#,
-                        #mac.binary.leopard="mac.binary.leopard.ver", 
-                        #mac.binary.mavericks="mac.binary.mavericks.ver")
+                        win64.binary="win64.binary.ver",
+                        mac.binary.leopard="mac.binary.leopard.ver", 
+                        mac.binary.mavericks="mac.binary.mavericks.ver")
               
               fileTypes <- list(source="Package source",
                                 win64.binary="Windows 64-bit binary",
                                 mac.binary.leopard="MacOS X 10.5 (Leopard) binary", 
                                 mac.binary.mavericks="MacOS X >=10.9 (Mavericks) binary")
+             
+              
               makeLinkHelper <- function(type) {
                 
                 
